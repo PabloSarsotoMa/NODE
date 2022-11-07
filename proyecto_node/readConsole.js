@@ -1,4 +1,4 @@
-module.exports = function readConsole(callback){
+function readConsole(callback){
     const fs = require("fs");
     let readLine = require(`readline`);
     let rl = readLine.createInterface(process.stdin, process.stdout);
@@ -10,9 +10,10 @@ module.exports = function readConsole(callback){
             rl.question(`¿Cúal es tu edad?`,(edad)=>{
                 obj1.age = edad;
                 rl.close();
-                callback(obj1);
+                callback (obj1);
             })
         })
     });
 }
-readConsole(console.log)
+// readConsole(console.log);
+module.exports = {readConsole}
