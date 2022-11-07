@@ -17,7 +17,6 @@ setTimeout(function(){
                 rl.question(`¿Cúal es tu edad?`,(edad)=>{
                     obj1.age = edad;
                     rl.close();
-                    console.log(obj1);
                     let stringObj = JSON.stringify(obj1);
                     fs.writeFile('./objetos.json',stringObj,`utf8`,(err)=>{
                         if(err){
