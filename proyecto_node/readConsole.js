@@ -15,5 +15,5 @@ function readConsole(callback){
         })
     });
 }
-// readConsole(console.log);
+readConsole(console.log);
 module.exports = {readConsole}
