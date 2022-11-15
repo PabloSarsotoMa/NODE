@@ -58,7 +58,7 @@ function crear_personaje(){
 }
 function mostrar_personaje(){
     let id = document.getElementById("id").value;
-    if(id!=null){
+    if(id!=""){
         let url = `http://localhost:3000/profesional?id=${id}`;
         let param = {
         headers: {"Content-type": "application/json; charset=UTF-8"},
@@ -98,7 +98,7 @@ function mostrar_personaje(){
             .then(function(data){
                 console.log(data)
                 for(i=0;i<data.resultado.length;i++){
-                document.getElementById("profesionales").innerHTML = `
+                document.getElementById("profesionales").innerHTML += `
                 <div class="card bg-danger" style="width: 18rem;">
                 <img src="./galeria/RPC-JP_Logo.png" class="card-img-top" alt="...">
                 <div class="card-body">
